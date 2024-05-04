@@ -1,17 +1,31 @@
-public class ReservaGrupo : IReserva
-{
-    public void ReservarVoo(string nomePassageiro, string numeroVoo)
+public class ReservaGrupo : IReserva{
+    public string NomeDoGrupo {get;set;}
+    public string Voo {get;set;}
+    public int NumPessoas {get;set;}
+    public string Status {get;set;}
+    public ReservaGrupo(string nomeDoGrupo, string voo, int numPessoas)
     {
-        Console.WriteLine($"Reserva do voo {numeroVoo} para o grupo grande realizada");
+        NomeDoGrupo = nomeDoGrupo;
+        Voo = voo;
+        NumPessoas = numPessoas;
+        Status = "Reserva pendente";
     }
 
-    public void CancelarReserva(string numeroVoo)
+    public void ReservarVoo()
     {
-        Console.WriteLine($"Reserva do voo {numeroVoo} para o grupo grande cancelada.");
+        Status = "Reservado";
+        Console.WriteLine(NomeDoGrupo + "  a reserva em grupo para o voo: " + Voo + " foi realizada.");
     }
 
-    public string VerificarStatusReserva(string numeroVoo)
+    public void CancelarReserva()
     {
-        return $"Reserva do voo {numeroVoo} para o grupo grande confirmada.";
+        Status = "Cancelado";
+        Console.WriteLine(NomeDoGrupo + " a reserva em grupo para o voo: " + Voo + " foi cancelada.");
+        Voo = "";
+    }
+
+    public void VerificarStatusReserva()
+    {
+        Console.WriteLine("status da reserva: " + Status);
     }
 }

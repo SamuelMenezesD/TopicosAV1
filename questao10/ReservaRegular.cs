@@ -1,17 +1,27 @@
-public class ReservaRegular : IReserva
-{
-    public void ReservarVoo(string nomePassageiro, string numeroVoo)
+public class ReservaRegular : IReserva{
+    public string Nome {get;set;}
+    public string Voo {get;set;}
+    public string Status {get;set;}
+
+    public ReservaRegular(string nome, string voo)
     {
-        Console.WriteLine($"Reserva do voo {numeroVoo} realizada");
+        Nome = nome;
+        Voo = voo;
+        Status = "Reserva pendente";
     }
 
-    public void CancelarReserva(string numeroVoo)
-    {
-        Console.WriteLine($"Reserva do voo {numeroVoo} cancelada.");
+    public void ReservarVoo(){
+        Status = "Reservado";
+        Console.WriteLine(Nome + " a reserva regular para o voo: " + Voo + " foi realizada.");
     }
 
-    public string VerificarStatusReserva(string numeroVoo)
-    {
-        return $"Reserva do voo {numeroVoo} confirmada.";
+    public void CancelarReserva(){
+        Status = "Cancelado";
+        Console.WriteLine(Nome + " a reserva regular para o voo: " + Voo + " foi cancelada.");
+        Voo = "";
+    }
+
+    public void VerificarStatusReserva(){
+        Console.WriteLine("status da reserva: " + Status);
     }
 }
