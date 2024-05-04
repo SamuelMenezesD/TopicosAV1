@@ -1,0 +1,5 @@
+C:\Users\samue\Desktop\manito\faculdade\terceiro semestre\topicos\Avaliação 1 C#\questao9\obj\Debug\net8.0\questao9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samue\Desktop\manito\faculdade\terceiro semestre\topicos\Avaliação 1 C#\questao9\obj\Debug\net8.0\questao9.AssemblyInfoInputs.cache
+C:\Users\samue\Desktop\manito\faculdade\terceiro semestre\topicos\Avaliação 1 C#\questao9\obj\Debug\net8.0\questao9.AssemblyInfo.cs
+C:\Users\samue\Desktop\manito\faculdade\terceiro semestre\topicos\Avaliação 1 C#\questao9\obj\Debug\net8.0\questao9.csproj.CoreCompileInputs.cache
+C:\Users\samue\Desktop\manito\faculdade\terceiro semestre\topicos\Avaliação 1 C#\questao9\obj\Debug\net8.0\questao9.sourcelink.json

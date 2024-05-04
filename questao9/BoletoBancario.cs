@@ -1,13 +1,18 @@
-public class BoletoBancario : IMetodoPagamento
-{
-    public bool RealizarPagamento(double valor)
+public class BoletoBancario : IMetodoPagamento{
+    public double Valor {get; set;}
+    public string status {get; set;}
+    public BoletoBancario (double valor){
+        this.Valor = valor;
+        this.status = "Pendente";
+    }
+    public void RealizarPagamento()
     {
-        Console.WriteLine($"Pagamento de {valor} realizado");
-        return true;
+        status = "Pago";
+        Console.WriteLine($"Pagamento de {Valor} realizado");
     }
 
-    public string VerificarStatus()
+    public void VerificarStatus()
     {
-        return "Pagamento confirmado";
+        Console.WriteLine ("Status do pagamento: " + status);
     }
 }

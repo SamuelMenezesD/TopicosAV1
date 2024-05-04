@@ -1,5 +1,4 @@
-public interface IMetodoPagamento
-{
-    bool RealizarPagamento(double valor);
-    string VerificarStatus();
+public interface IMetodoPagamento{
+    public void RealizarPagamento();
+    public void VerificarStatus();
 }

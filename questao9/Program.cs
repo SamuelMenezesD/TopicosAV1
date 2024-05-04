@@ -1,3 +1,5 @@
-﻿IMetodoPagamento metodoPagamento = new CartaoCredito();
-bool pagamentoAprovado = metodoPagamento.RealizarPagamento(67.79);
-string statusPagamento = metodoPagamento.VerificarStatus();
+﻿Caixa caixa = new Caixa();
+BoletoBancario boletoBancario = new BoletoBancario(550.3);
+
+caixa.RealizarPagamento(boletoBancario);
+caixa.Status(boletoBancario);

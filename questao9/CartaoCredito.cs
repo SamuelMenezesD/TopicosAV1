@@ -1,14 +1,18 @@
-
-public class CartaoCredito : IMetodoPagamento
-{
-    public bool RealizarPagamento(double valor)
+public class CartaoCredito : IMetodoPagamento{
+    public double Valor {get; set;}
+    public string status {get; set;}
+    public CartaoCredito (double valor){
+        this.Valor = valor;
+        this.status = "Pendente";
+    }
+    public void RealizarPagamento()
     {
-        Console.WriteLine($"Pagamento de R${valor} realizado");
-        return true;
+        status = "Pago";
+        Console.WriteLine($"Pagamento de {Valor} realizado");
     }
 
-    public string VerificarStatus()
+    public void VerificarStatus()
     {
-        return "Pagamento aprovado";
+        Console.WriteLine ("Status do pagamento: " + status);
     }
 }
